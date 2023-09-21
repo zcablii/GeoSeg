@@ -39,17 +39,17 @@ use_aux_loss = True
 
 # define the dataloader
 
-train_dataset = VaihingenDataset(data_root='data/vaihingen/train', mode='train',
+train_dataset = VaihingenDataset(data_root='/root/siton-gpfs-pubdata/remote_sense/Vaihingen/trainval', mode='train',
                                  mosaic_ratio=0.25, transform=train_aug)
 
 val_dataset = VaihingenDataset(transform=val_aug)
-test_dataset = VaihingenDataset(data_root='data/vaihingen/test',
+test_dataset = VaihingenDataset(data_root='/root/siton-gpfs-pubdata/remote_sense/Vaihingen/test',
                                 transform=val_aug)
 
 train_loader = DataLoader(dataset=train_dataset,
                           batch_size=train_batch_size,
                           num_workers=4,
-                          pin_memory=True,
+                          pin_memory=False,
                           shuffle=True,
                           drop_last=True)
 
@@ -57,7 +57,7 @@ val_loader = DataLoader(dataset=val_dataset,
                         batch_size=val_batch_size,
                         num_workers=4,
                         shuffle=False,
-                        pin_memory=True,
+                        pin_memory=False,
                         drop_last=False)
 
 # define the optimizer

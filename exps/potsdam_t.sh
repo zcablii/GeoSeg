@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=7 python train_supervision.py -c config/potsdam/unetformer_lsk_t.py 
+CUDA_VISIBLE_DEVICES=7 python potsdam_test.py -c config/potsdam/unetformer_lsk_t.py -o fig_results/potsdam/lsk_t --rgb -t 'd4' 

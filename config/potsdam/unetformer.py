@@ -41,11 +41,11 @@ use_aux_loss = True
 
 # define the dataloader
 
-train_dataset = PotsdamDataset(data_root='data/potsdam/train', mode='train',
+train_dataset = PotsdamDataset(data_root='/root/siton-gpfs-pubdata/remote_sense/Potsdam/trainval', mode='train',
                                mosaic_ratio=0.25, transform=train_aug)
 
 val_dataset = PotsdamDataset(transform=val_aug)
-test_dataset = PotsdamDataset(data_root='data/potsdam/test',
+test_dataset = PotsdamDataset(data_root='/root/siton-gpfs-pubdata/remote_sense/Potsdam/test',
                               transform=val_aug)
 
 train_loader = DataLoader(dataset=train_dataset,
