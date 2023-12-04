@@ -279,12 +279,18 @@ python GeoSeg/inference_huge_image.py \
 ## Reproduction Results
 |    Method     |  Dataset  |  F1   |  OA   |  mIoU |
 |:-------------:|:---------:|:-----:|:-----:|------:|
-|  UNetFormer   |   UAVid   |   -   |   -   | 67.63 |
-|  UNetFormer   | Vaihingen | 90.30 | 91.10 | 82.54 |
 |  UNetFormer   |  Potsdam  | 92.64 | 91.19 | 86.52 |
+|   LSKNet-T    |  Potsdam  | 92.90 | 91.70 | 86.70 |
+|   LSKNet-S    |  Potsdam  | 93.10 | 92.00 | 87.20 |
+|  UNetFormer   | Vaihingen | 90.30 | 91.10 | 82.54 |
+|   LSKNet-T    | Vaihingen | 91.70 | 93.60 | 84.90 |
+|   LSKNet-S    | Vaihingen | 91.80 | 93.60 | 85.10 |
 |  UNetFormer   |  LoveDA   |   -   |   -   | 52.97 |
-| FT-UNetFormer | Vaihingen | 91.17 | 91.74 | 83.98 |
-| FT-UNetFormer |  Potsdam  | 93.22 | 91.87 | 87.50 |
+|   LSKNet-T    |   LoveDA  |   -   |   -   | 53.20 |
+|   LSKNet-S    |   LoveDA  |   -   |   -   | 54.00 |
+|  UNetFormer   |   UAVid   |   -   |   -   | 67.63 |
+|   LSKNet-T    |   UAVid   |   -   |   -   | 69.30 |
+|   LSKNet-S    |   UAVid   |   -   |   -   | 70.00 |
 
 Due to some random operations in the training stage, reproduced results (run once) are slightly different from the reported in paper.
 
@@ -292,6 +298,7 @@ Due to some random operations in the training stage, reproduced results (run onc
 
 If you find this project useful in your research, please consider citing：
 
+- [Large Selective Kernel Network for Remote Sensing Object Detection (ICCV 2023)](https://openaccess.thecvf.com/content/ICCV2023/papers/Li_Large_Selective_Kernel_Network_for_Remote_Sensing_Object_Detection_ICCV_2023_paper.pdf)
 - [UNetFormer: A UNet-like transformer for efficient semantic segmentation of remote sensing urban scene imagery](https://authors.elsevier.com/a/1fIji3I9x1j9Fs)
 - [A Novel Transformer Based Semantic Segmentation Scheme for Fine-Resolution Remote Sensing Images](https://ieeexplore.ieee.org/abstract/document/9681903) 
 - [Transformer Meets Convolution: A Bilateral Awareness Network for Semantic Segmentation of Very Fine Resolution Urban Scene Images](https://www.mdpi.com/2072-4292/13/16/3065)
